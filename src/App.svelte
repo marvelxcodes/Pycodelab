@@ -1,26 +1,13 @@
 <script lang="ts">
 	import Header from "@/components/Header.svelte";
-   import Interactive from "@/components/Interactive.svelte";
-   import Script from "@/components/Script.svelte";
-
-	let isScriptMode = true;
-	function invertMode() {
-		isScriptMode = !isScriptMode;
-	}
+	import Editor from "@/components/Editor.svelte";
 </script>
 
-<main>
-	<Header
-      invertMode={invertMode}
-      isScriptMode={isScriptMode}
-   />
-   
-	{#if isScriptMode}
-      <Script/>
-   {:else}
-      <Interactive />
-   {/if}
+<main class="bg-black h-screen">
+	<Header />
+	<Editor />
 </main>
 
 <style lang="postcss">
+
 </style>
